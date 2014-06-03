@@ -10,7 +10,7 @@ describe "OmniAuth::Strategies::Acclaim" do
   end
 
   context 'client options' do
-    it 'has correct LinkedIn site' do
+    it 'has correct Acclaim site' do
       subject.options.client_options.site.should eq('https://api.youracclaim.com')
     end
 
