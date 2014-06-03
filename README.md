@@ -1,4 +1,5 @@
 # Omniauth::Acclaim
+<img src="https://travis-ci.org/brentkastner/omniauth-acclaim.svg?branch=master"></img>
 
 The omniauth-acclaim gem integrates with the oAuth2 provider on the Acclaim platform.  It follows the
 patterns established by omniauth and devise
