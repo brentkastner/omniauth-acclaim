@@ -28,7 +28,6 @@ module OmniAuth
         @raw_info ||= access_token.get('v1/users/self.json').parsed
       end
 
-
     end
   end
 end
