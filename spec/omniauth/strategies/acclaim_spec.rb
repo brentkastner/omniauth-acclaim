@@ -18,4 +18,24 @@ describe "OmniAuth::Strategies::Acclaim" do
       subject.options.client_options.authorize_path.should eq('/oauth/authorize')
     end
   end
+
+  context '#uid' do
+    before :each do
+      subject.stub(:raw_info) { { 'id' => '123' } }
+    end
+
+    it 'returns the id from raw_info' do
+      subject.uid.should eq('123')
+    end
+  end
+
+  context 'returns info hash conformant with omniauth auth hash schema' do
+    before :each do
+      subject.stub(:raw_info) { {} }
+    end
+
+    context 'and therefore has all the necessary fields' do
+      it {subject.info.should have_key :email}
+    end
+  end
 end
