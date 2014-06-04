@@ -7,8 +7,6 @@ module OmniAuth
 
       option :client_options, {
           :site => 'http://localhost:4000',
-          :request_token_path => '/oauth/token',
-          :access_token_path => '/oauth/token',
           :authorize_url => 'http://localhost:4000/oauth/authorize'
       }
 
