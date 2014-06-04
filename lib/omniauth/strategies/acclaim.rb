@@ -1,20 +1,19 @@
-require 'omniauth/strategies/oauth'
+require 'omniauth/strategies/oauth2'
 
 module OmniAuth
   module Strategies
-    class Acclaim < OmniAuth::Strategies::OAuth
+    class Acclaim < OmniAuth::Strategies::OAuth2
       option :name, "acclaim"
 
       option :client_options, {
-          :site => 'http://localhost:4000',
-          :authorize_url => 'http://localhost:4000/oauth/authorize'
+          :site => 'https://api.youracclaim.com',
+          :authorize_path => '/oauth/authorize'
       }
 
       uid { raw_info['id'] }
 
       info do
         {
-            :name => raw_info['name'],
             :email => raw_info['email']
         }
       end
@@ -26,7 +25,7 @@ module OmniAuth
       end
 
       def raw_info
-        @raw_info ||= access_token.get('/oauth/me.json').parsed
+        @raw_info ||= access_token.get('v1/users/self.json').parsed
       end
 
 
