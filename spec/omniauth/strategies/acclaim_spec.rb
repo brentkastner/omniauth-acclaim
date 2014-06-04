@@ -15,15 +15,15 @@ describe "OmniAuth::Strategies::Acclaim" do
     end
 
     it 'has correct request token path' do
-      subject.options.client_options.request_token_path.should eq('/oauth/requestToken')
+      subject.options.client_options.request_token_path.should eq('/oauth/token')
     end
 
     it 'has correct access token path' do
-      subject.options.client_options.access_token_path.should eq('/oauth/accessToken')
+      subject.options.client_options.access_token_path.should eq('/oauth/token')
     end
 
     it 'has correct authorize url' do
-      subject.options.client_options.authorize_url.should eq('https://www.youracclaim.com/oauth/authenticate')
+      subject.options.client_options.authorize_url.should eq('https://www.youracclaim.com/oauth/authorize')
     end
   end
 end

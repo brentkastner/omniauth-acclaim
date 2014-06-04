@@ -7,9 +7,9 @@ module OmniAuth
 
       option :client_options, {
           :site => 'https://api.youracclaim.com',
-          :request_token_path => '/oauth/requestToken',
-          :access_token_path => '/oauth/accessToken',
-          :authorize_url => 'https://www.youracclaim.com/oauth/authenticate'
+          :request_token_path => '/oauth/token',
+          :access_token_path => '/oauth/token',
+          :authorize_url => 'https://www.youracclaim.com/oauth/authorize'
       }
     end
   end
