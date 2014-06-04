@@ -6,10 +6,10 @@ module OmniAuth
       option :name, "acclaim"
 
       option :client_options, {
-          :site => 'https://api.youracclaim.com',
+          :site => 'https://localhost:4000',
           :request_token_path => '/oauth/token',
           :access_token_path => '/oauth/token',
-          :authorize_url => 'https://www.youracclaim.com/oauth/authorize'
+          :authorize_url => 'https://localhost:4000/oauth/authorize'
       }
     end
   end

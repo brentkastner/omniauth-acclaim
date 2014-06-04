@@ -11,7 +11,7 @@ describe "OmniAuth::Strategies::Acclaim" do
 
   context 'client options' do
     it 'has correct Acclaim site' do
-      subject.options.client_options.site.should eq('https://api.youracclaim.com')
+      subject.options.client_options.site.should eq('https://localhost:4000')
     end
 
     it 'has correct request token path' do
@@ -23,7 +23,7 @@ describe "OmniAuth::Strategies::Acclaim" do
     end
 
     it 'has correct authorize url' do
-      subject.options.client_options.authorize_url.should eq('https://www.youracclaim.com/oauth/authorize')
+      subject.options.client_options.authorize_url.should eq('https://localhost:4000/oauth/authorize')
     end
   end
 end
