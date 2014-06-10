@@ -36,6 +36,8 @@ describe "OmniAuth::Strategies::Acclaim" do
 
     context 'and therefore has all the necessary fields' do
       it {subject.info.should have_key :email}
+      it {subject.info.should have_key :first_name}
+      it {subject.info.should have_key :last_name}
     end
   end
 end
