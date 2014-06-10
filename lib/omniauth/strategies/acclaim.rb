@@ -14,7 +14,9 @@ module OmniAuth
 
       info do
         {
-            :email => raw_info['email']
+            :email => raw_info['email'],
+            :first_name => raw_info['first_name'],
+            :last_name => raw_info['last_name']
         }
       end
 
@@ -25,7 +27,7 @@ module OmniAuth
       end
 
       def raw_info
-        @raw_info ||= access_token.get('v1/users/self.json').parsed
+        @raw_info ||= access_token.get('/oauth/v1/users/self').parsed
       end
 
     end
