@@ -10,19 +10,19 @@ module OmniAuth
           :authorize_path => '/oauth/authorize'
       }
 
-      uid { raw_info['id'] }
+      uid { raw_info['data']['id'] }
 
       info do
         {
-            :email => raw_info['email'],
-            :first_name => raw_info['first_name'],
-            :last_name => raw_info['last_name']
+            :email => raw_info['data']['email'],
+            :first_name => raw_info['data']['first_name'],
+            :last_name => raw_info['data']['last_name']
         }
       end
 
       extra do
         {
-            'raw_info' => raw_info
+            'raw_info' => raw_info['data']
         }
       end
 
