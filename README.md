@@ -4,7 +4,7 @@
 [![Gem Version](https://badge.fury.io/rb/omniauth-acclaim.svg)](http://badge.fury.io/rb/omniauth-acclaim)
 
 The omniauth-acclaim gem integrates with the oAuth2 provider on the Acclaim platform.  It follows the
-patterns established by omniauth and devise
+strategy pattern established by omniauth.
 
 ## Installation
 
