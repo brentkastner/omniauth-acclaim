@@ -21,7 +21,7 @@ describe "OmniAuth::Strategies::Acclaim" do
 
   context '#uid' do
     before :each do
-      subject.stub(:raw_info) { { 'id' => '123' } }
+      subject.stub(:raw_info) { { 'data' => { 'id' => '123'} } }
     end
 
     it 'returns the id from raw_info' do
@@ -31,7 +31,7 @@ describe "OmniAuth::Strategies::Acclaim" do
 
   context 'returns info hash conformant with omniauth auth hash schema' do
     before :each do
-      subject.stub(:raw_info) { {} }
+      subject.stub(:raw_info) { { 'data' => {} } }
     end
 
     context 'and therefore has all the necessary fields' do
