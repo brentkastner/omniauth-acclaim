@@ -1,6 +1,8 @@
 # Omniauth::Acclaim
 [![Build Status](https://travis-ci.org/brentkastner/omniauth-acclaim.svg?branch=master)](https://travis-ci.org/brentkastner/omniauth-acclaim)
 
+[![Gem Version](https://badge.fury.io/rb/omniauth-acclaim.svg)](http://badge.fury.io/rb/omniauth-acclaim)
+
 The omniauth-acclaim gem integrates with the oAuth2 provider on the Acclaim platform.  It follows the
 patterns established by omniauth and devise
 
@@ -12,7 +14,7 @@ Add this line to your application's Gemfile:
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
 Or install it yourself as:
 
